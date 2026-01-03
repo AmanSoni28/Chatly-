@@ -19,7 +19,7 @@ function App() {
   const dispatch=useDispatch()
 
   useGetCurrentUser()          
-  useGetOtherUsers 
+  useGetOtherUsers() 
 
   //connect socket.io with backend
   useEffect(()=>{      
