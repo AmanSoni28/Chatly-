@@ -65,7 +65,7 @@ return(
         </div>
       </div>
 
-      <form onSubmit={handleProfile} className="w-[500px] flex flex-col gap-[24px] items-center mt-12">
+      <form onSubmit={handleProfile} className="lg:w-[500px] flex flex-col gap-[24px] items-center mt-12">
 
         <input 
         type="file" 

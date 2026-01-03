@@ -6,7 +6,7 @@ import {RxCross2} from 'react-icons/rx'
 import { BiLogOutCircle } from "react-icons/bi";
 import axios from "axios";
 import { serverUrl } from "../main.jsx";
-import { setMessages, setOnlineUsers, setOtherUsers, setSearchData, setSelectedUser, setUserData } from "../redux/userSlice.js";
+import { setMessages, setOtherUsers, setSearchData, setSelectedUser, setUserData, setOnlineUsers } from "../redux/userSlice.js";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
@@ -28,7 +28,7 @@ const SideBar = () => {
         dispatch(setOtherUsers(null))
         dispatch(setSelectedUser(null))
         dispatch(setMessages([]))
-        dispatch(setOnlineUsersnlineUsers())
+        dispatch(setOnlineUsers())
         navigate('/login')
         toast.success(resutl?.data?.message)
     } catch (error) {

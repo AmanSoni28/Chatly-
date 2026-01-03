@@ -42,7 +42,7 @@ function LogIn() {
   return (
     <div className="w-full min-h-screen bg-[#6B7C93] flex items-center justify-center " style={{ backgroundImage: "url('/back2.png')" }}>
       
-      <div className="w-full max-w-[500px] h-[620px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+      <div className="w-[80%]  ms:w-full max-w-[500px] h-[550px] ms:h-[620px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden">
 
         {/* Header */}
         <div className="w-full h-[220px] bg-gradient-to-r from-[#1fb6ff] to-[#20c7ff] rounded-b-[30%] shadow-lg flex items-center justify-around px-6">
