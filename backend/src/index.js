@@ -9,7 +9,7 @@ import { app,server } from './socket/socket.js'
 const port = process.env.PORT || 6000
 
 app. use(cors({                                                
-    origin:process.env.CORS_ORIGIN,                         
+    origin:"https://chatly-frontend-tnlz.onrender.com",                         
     credentials:true
 }))
 
