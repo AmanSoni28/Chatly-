@@ -35,7 +35,7 @@ try {
    const options={
     httpOnly:true, 
     maxAge:7*24*60*60*1000,                                     //7 day
-    sameSite:"Lax",
+    sameSite:"None",
     secure:true
    }
 
@@ -75,8 +75,8 @@ try {
    const options={
     httpOnly:true,
     maxAge:7*24*60*60*1000,                         //7 day
-    sameSite:"Lax",
-    secure:false
+    sameSite:"None",
+    secure:true
    }
 
    return res.status(200)
