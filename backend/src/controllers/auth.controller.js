@@ -92,7 +92,11 @@ try {
 const logOut = async (req,res)=>{
     try {
         return res.status(200)
-        .clearCookie("token")
+        .clearCookie("token",{
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+      })
         .json({message : "logOut Successfully"})
     } catch (error) {
         return res.status(500).json({messasge : `logOut error ${error}`})
