@@ -29,9 +29,9 @@ const SideBar = () => {
         dispatch(setSelectedUser(null))
         dispatch(setMessages([]))
         navigate('/login')
-        toast.success(resutl.data.message)
+        toast.success(resutl?.data?.message)
     } catch (error) {
-        toast.error(error.response?.data?.message || "Log Out Error")
+        toast.error(error?.response?.data?.message || "Log Out Error")
     }
   }
 
@@ -42,7 +42,7 @@ const SideBar = () => {
         // console.log(result.data);
         
     } catch (error) {
-        toast.error(error.response?.data?.message || "search user error")
+        toast.error(error?.response?.data?.message || "search user error")
     }
   }
   useEffect(()=>{

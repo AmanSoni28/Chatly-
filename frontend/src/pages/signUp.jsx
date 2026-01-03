@@ -28,13 +28,13 @@ function SignUp() {
       // console.log(data);
       navigate('/profile')
       dispatch(setUserData(data))
-      toast.success(data.message)
+      toast.success(data?.message)
       setUserName("")
       setEmail("")
       setPassword("")
       setLoading(false)
     } catch (error) {
-      toast.error(error.response?.data?.message || "SignUp Error");
+      toast.error(error?.response?.data?.message || "SignUp Error");
       setLoading(false)
     }
   }

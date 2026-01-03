@@ -41,9 +41,9 @@ function Profile(){
       dispatch(setUserData(result.data))
       navigate('/')
       setLoading(false)
-      toast.success(result.data.message)    
+      toast.success(result?.data?.message)    
     } catch (error) {
-      toast.error(error.response?.data?.message)
+      toast.error(error?.response?.data?.message)
       setLoading(false)
     }
   }

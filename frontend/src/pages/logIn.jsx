@@ -29,12 +29,12 @@ function LogIn() {
       const data=result.data
       dispatch(setUserData(data))
       navigate('/')
-      toast.success(data.message)
+      toast.success(data?.message)
       setEmail("")
       setPassword("")
       setLoading(false)
     } catch (error) {
-      toast.error(error.response?.data?.message || "Login Error");
+      toast.error(error?.response?.data?.message || "Login Error");
       setLoading(false)
     }
   }  
