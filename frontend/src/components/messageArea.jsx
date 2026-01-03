@@ -55,19 +55,12 @@ const MessageArea = () => {
     setMessage((prev)=>prev+EmojiPick.emoji)                     //prev messsage and add the emoji
   }
 
- useEffect(() => {
-  if (!socket) return;
-
-  const handleNewMessage = (mess) => {
-    dispatch(setMessages(prev => [...prev, mess]));
-  };
-
-  socket.on("newMessage", handleNewMessage);
-
-  return () => {
-    socket.off("newMessage", handleNewMessage);
-  };
-}, [socket, dispatch]);
+  useEffect(()=>{
+   socket.on("newMessage",(mess)=>{
+    dispatch(setMessages([...messages,mess]))
+   })
+   return ()=>socket.off("newMessage")                    //off the newMessage event
+  },[messages,setMessages])
 
   return (
     <div className={`lg:w-[70%] ${selectedUser?"flex":"hidden"} lg:block w-full h-full bg-gray-200 border-l-2 border-gray-400 `}>

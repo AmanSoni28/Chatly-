@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { serverUrl } from "../main"
 import { setOtherUsers } from "../redux/userSlice.js"
 
-const useGetOtherUsers=()=>{
+const getOtherUsers=()=>{
     const dispatch=useDispatch()
     
     const {userData}=useSelector((state)=>state.user)            
@@ -23,4 +23,4 @@ const useGetOtherUsers=()=>{
     },[userData])
 }
 
-export default useGetOtherUsers
+export default getOtherUsers

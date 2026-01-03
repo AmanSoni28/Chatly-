@@ -28,7 +28,7 @@ const SideBar = () => {
         dispatch(setOtherUsers(null))
         dispatch(setSelectedUser(null))
         dispatch(setMessages([]))
-        dispatch(setOnlineUsers(null))
+        dispatch(setOnlineUsersnlineUsers())
         navigate('/login')
         toast.success(resutl?.data?.message)
     } catch (error) {
