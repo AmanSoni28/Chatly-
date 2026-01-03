@@ -69,7 +69,7 @@ const SideBar = () => {
       <div className="w-full flex justify-between items-center">
         <h1 className="text-gray-700 font-bold text-[20px]">Hii , {userData.user.name || "User"}</h1>
         <div onClick={()=>navigate('/profile')} className=' w-[60px] h-[60px] rounded-full overflow-hidden flex justify-center items-center shadow-gray-500 shadow-lg bg-gray-200 cursor-pointer '>
-          <img src={userData.user.image || DP}  alt="" class/>
+          <img src={userData.user.image || DP}  alt="" />
         </div>
       </div> 
       
