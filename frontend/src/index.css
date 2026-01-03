@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+/* <------------------Notes:setup the scrollbar----------------------> */
+/* when we fixed the height of div and apply tailwind 'overflow-auto' then extra content availble the scrollbar create 
+for set size and background of scrollbar takiwind does not have any direct property
+using CSS create 'thin-scrollber' and put in tailwind where we want to use/
+
+
+/* Thin scrollbar */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 4px;          /* 👈 reduce width (try 2px–x) */
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Firefox ( thin | auto)*/
+/* .thin-scrollbar {
+  scrollbar-width: thin;          
+} */
