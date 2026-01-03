@@ -48,7 +48,7 @@ function App() {
       }
     }
 
-  },[userData,socket])
+  },[userData])
   
   return (
     <>
