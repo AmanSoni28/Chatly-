@@ -24,11 +24,11 @@ const SideBar = () => {
   const handleLogOut=async ()=>{
     try {
         const resutl = await axios.get(`${serverUrl}/api/auth/logout`,{withCredentials:true})
-        navigate('/login')
         dispatch(setUserData(null))
         dispatch(setOtherUsers(null))
         dispatch(setSelectedUser(null))
         dispatch(setMessages([]))
+        navigate('/login')
         toast.success(resutl.data.message)
     } catch (error) {
         toast.error(error.response?.data?.message || "Log Out Error")

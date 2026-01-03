@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { serverUrl } from "../main.jsx"
 import { setMessages } from "../redux/userSlice.js"
 
-const getMessages=()=>{
+const useGetMessages=()=>{
     const dispatch=useDispatch()
     
     const {userData,selectedUser}=useSelector((state)=>state.user)            
@@ -22,4 +22,4 @@ const getMessages=()=>{
     },[userData,selectedUser])
 }
 
-export default getMessages
+export default useGetMessages

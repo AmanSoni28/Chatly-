@@ -5,7 +5,7 @@ import { serverUrl } from "../main"
 import { setUserData } from "../redux/userSlice.js"
 
 
-const getCurrentUser=()=>{
+const useGetCurrentUser=()=>{
     // console.log("hello")
     const dispatch=useDispatch()
     useEffect(()=>{
@@ -15,6 +15,7 @@ const getCurrentUser=()=>{
             // console.log("hello")
             dispatch(setUserData(result.data))
         } catch (error) {
+            dispatch(setUserData(null));
             console.log("getCurrentUser error:",error);
         }
      }
@@ -22,4 +23,4 @@ const getCurrentUser=()=>{
     },[])
 }
 
-export default getCurrentUser
+export default useGetCurrentUser

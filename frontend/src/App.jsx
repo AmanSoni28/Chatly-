@@ -3,21 +3,23 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import SignUp from './pages/signUp.jsx'
 import LogIn from './pages/logIn.jsx'
 import { Toaster } from "react-hot-toast";
-import getCurrentUser from './customHook/getCurrentUser.js';
+// import getCurrentUser from './customHook/getCurrentUser.js';
 import Home from './pages/home.jsx';
 import Profile from './pages/profile.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-import getOtherUsers from './customHook/getOtherUsers.js';
+// import getOtherUsers from './customHook/getOtherUsers.js';
 import { io } from "socket.io-client";
 import { serverUrl } from './main.jsx';
 import { setSocket,setOnlineUsers } from './redux/userSlice.js';
+import useGetCurrentUser from './customHook/getCurrentUser.js';
+import useGetOtherUsers from './customHook/getOtherUsers.js';
 
 function App() {
   const {userData,socket}=useSelector((state)=>state.user)    //when any field Change then App component re-render
   const dispatch=useDispatch()
 
-  getCurrentUser()          
-  getOtherUsers()
+  useGetCurrentUser()          
+  useGetOtherUsers 
 
   //connect socket.io with backend
   useEffect(()=>{      
@@ -46,7 +48,7 @@ function App() {
       }
     }
 
-  },[userData])
+  },[userData,socket])
   
   return (
     <>
