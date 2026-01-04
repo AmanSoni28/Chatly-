@@ -102,3 +102,9 @@ Connection	                       Short-lived	                    Persistent
 
 👉 Best practice:
 Use REST for CRUD + Socket.IO for real-time
+
+<--------------------------- Render:https://render.com/ ---------------------------->
+1.first deploy backend
+2.now outcome of backend URL fron render set in frontend at main.jsx(or where backend localhost URL) and deploy frontend
+3.now change cookies in backend and set frontend outcome URL from render at .env(or where frontend localhost URL) 
+4.if cahnge in .env file then manualy change in (render->backend->enviroment)  
